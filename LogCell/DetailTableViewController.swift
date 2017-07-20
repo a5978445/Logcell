@@ -30,7 +30,7 @@ class DetailTableViewController: UITableViewController {
                 
             case .layoutCustom:
                 
-                return LogTableViewCell(reuseIdentifier: "cell", cellLayout:   LogTableViewCellLayout { rightLabels,leftLabels  in
+                return LogTableViewCell(reuseIdentifier: "cell", cellLayout:   LogTableViewCellLayout(updateLayout: { rightLabels,leftLabels  in
                     let top = 7
                     let leftMargin = 10
                     let rightMargin = 11
@@ -66,7 +66,7 @@ class DetailTableViewController: UITableViewController {
                         }
                     }
                     
-                })
+                }))
             case .labelCustom:
                 
                 
